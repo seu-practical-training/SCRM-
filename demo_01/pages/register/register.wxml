@@ -1,0 +1,21 @@
+<view class="container">
+
+  <view class="infoBar">
+    <text class="frist"><text class="second">1.输入手机号</text>> 2.设置密码 > 3.人脸信息采集</text>
+  </view>
+
+  <view class="section">
+    <input placeholder="请输入手机号码" type="number" maxlength="11" bindinput="inputPhoneNum" auto-focus />
+    <view class="send" bindtap="sendMsg">
+    <text wx:if="{{send}}" >发送</text>
+    <text wx:if="{{alreadySend}}">{{second+"s"}}</text>
+    </view>
+  </view>
+
+  <view class="section">
+    <input placeholder="请输入短信验证码" type="number" bindinput="addCode" />
+  </view>
+
+  <button  bindtap="onsubmit" bindtap="navigate">设置密码</button>
+
+</view>
