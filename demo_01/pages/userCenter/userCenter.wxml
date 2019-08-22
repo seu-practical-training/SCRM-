@@ -1,0 +1,72 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="top">
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block class="userformat" wx:else>
+        <image class="userinfoAvatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfoNickname">用户名:{{userInfo.nickName}}</text>
+      </block>
+    </view>
+
+    <image class="shezhiFormat" src="../images/shezhi.png" bindtap="bindShezhi"></image>
+
+  </view>
+
+  <view class="userSelectRow">
+    <view class="format">
+      <!-- <button class='btn'> -->
+        <image class="iconImage" src="../images/nopayment.png"></image>
+      <!-- </button> -->
+      <text class="textFont">待付款</text>
+    </view>
+
+    <view class="format">
+      <!-- <button class='btn'> -->
+        <image class="iconImage" src="../images/daishouhuo.png"></image>
+      <!-- </button> -->
+      <text class="textFont">待收货</text>
+    </view>
+
+    <view class="format">
+      <!-- <button class='btn'> -->
+        <image class="iconImage" src="../images/daipingjia.png"></image>
+      <!-- </button> -->
+      <text class="textFont">待评价</text>
+    </view>
+
+    <view class="format">
+      <!-- <button class='btn'> -->
+        <image class="iconImage" src="../images/tuikuan.png"></image>
+      <!-- </button> -->
+      <text class="textFont">退换/售后</text>
+    </view>
+
+    <view class="format">
+      <!-- <button class='btn'> -->
+        <image class="iconImage" src="../images/dingdan.png"></image>
+      <!-- </button> -->
+      <text class="textFont">全部订单</text>
+    </view>
+
+  </view>
+
+  <!-- 列表 -->
+  <view class="personalList">
+    <view class="iconfont icon-reserve" bindtap="listFirst">我的订单</view>
+    <view class="iconfont icon-about">我的地址</view>
+    <view class="iconfont icon-edition">系统设置</view>
+    <view class="iconfont icon-password">关于推好物</view>
+    <view class="iconfont icon-feedback" style="border:none;">意见反馈</view>
+  </view>
+
+  <swiper indicator-dots="false" autoplay="true" interval="3000" duration="1000">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+</view>
