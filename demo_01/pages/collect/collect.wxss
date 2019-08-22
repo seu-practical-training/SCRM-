@@ -1,0 +1,18 @@
+.infoBar{
+   display: flex;
+   background:white;
+   font-size:28rpx;
+   align-items:center;
+   justify-content: center;
+ }
+
+.first{
+   color:red;
+ }
+
+  button{
+   margin-top:10rpx;
+   color:grey;
+   background-color: rgb(247,105,104);
+   border-radius:20rpx;
+ }

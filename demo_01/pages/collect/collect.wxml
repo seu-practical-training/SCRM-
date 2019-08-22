@@ -1,0 +1,18 @@
+<view class="container">
+
+  <view class="infoBar">
+    <text class="first">1.输入手机号 > 2.设置密码 > 3.人脸信息采集</text>
+  </view>
+
+  <camera
+ device-position="front"
+ flash="off"
+ binderror="error"
+ style="width: 100%; height: 400px;"
+></camera>
+
+<!-- 拍照按钮 -->
+<button type="primary" bindtap="takePhoto"> 拍照 </button>
+
+
+</view>
