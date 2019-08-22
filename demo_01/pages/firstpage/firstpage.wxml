@@ -1,0 +1,62 @@
+<!--pages/firstpage/firstpage.wxml-->
+<view class="search-wrapper">
+  <view class="search-panel">
+    <view class="search-section">
+      <view class="search-button-wrapper">
+        <image class="search-button" src="../images/scanning.png" bindtap="scan"></image>
+      </view>
+      <view class="search-input-wrapper ">
+        <input bindinput="bindBarcodeInput" bindconfirm="query" bindfocus="bindBarcodeFocus" bindblur="bindBarcodeBlur" class="search-input" placeholder="搜索商品，海量好物" value="{{barcode}}" confirm-type="search" />
+      </view>
+      <view class="search-button-wrapper">
+        <image class="search-button" src="../images/search.png" bindtap="query"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view>
+  <scroll-view class="scrollFormat" scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+    <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">推荐</view>
+    <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">图书</view>
+    <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">美妆</view>
+    <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">水果</view>
+    <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">母婴</view>
+    <view class="tab-item {{currentTab==5?'active':''}}" data-current="5" bindtap="swichNav">玩具</view>
+    <view class="tab-item {{currentTab==6?'active':''}}" data-current="6" bindtap="swichNav">厨卫</view>
+    <view class="tab-item {{currentTab==7?'active':''}}" data-current="7" bindtap="swichNav">家居</view>
+  </scroll-view>
+
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+    <swiper-item wx:for="{{[0,1,2,3,4,5,6,7]}}">
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block class="block1">
+          <view class="item-ans">
+            <view class="avatar">
+              <image class="img" src="../images/search.png"></image>
+            </view>
+            <view class="expertInfo">
+              <view class="name">金桔</view>
+              <view class="tag">产自淮南</view>
+              <view class="answerHistory">134个下单，2234人看过 </view>
+            </view>
+            <navigator url="../images/search" class="askBtn">查看</navigator>
+          </view>
+        </block>
+        <block wx:for="{{[2,3,4,5,6,7,8]}}" wx:key="*this">
+          <view class="item-ans">
+            <view class="avatar">
+              <image class="img" src="../images/search.png"></image>
+            </view>
+            <view class="expertInfo">
+              <view class="name">金桔</view>
+              <view class="tag">产自淮南</view>
+              <view class="answerHistory">134个下单，2234人看过 </view>
+            </view>
+            <navigator url="../images/search" class="askBtn">查看</navigator>
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+
+</view>
