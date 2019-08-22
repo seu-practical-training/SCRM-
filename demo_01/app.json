@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/mainlogin/mainlogin",
+    "pages/userCenter/userCenter",
+    
+    "pages/recommend/recommend",
+    "pages/login/login",
+    "pages/index/index",
+    "pages/register/register",
+    "pages/code/code",
+    "pages/collect/collect",
+    "pages/firstpage/firstpage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "推好物",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "pages/images/shouyeRed.png",
+        "iconPath": "pages/images/shouye.png",
+        "pagePath": "pages/firstpage/firstpage",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "pages/images/huangguanRed.png",
+        "iconPath": "pages/images/huangguan.png",
+        "pagePath": "pages/recommend/recommend",
+        "text": "推荐"
+      },
+      {
+        "selectedIconPath": "pages/images/yonghuRed.png",
+        "iconPath": "pages/images/yonghu.png",
+        "pagePath": "pages/userCenter/userCenter",
+        "text": "我的"
+      }
+    ]
+  }
+
+}
