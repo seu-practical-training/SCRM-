@@ -1,0 +1,39 @@
+<!--pages/mianlogin/mainlogin.wxml-->
+<view class='container'>
+
+<view class="section">
+<image class="icon" src="../images/icon.png"></image>
+</view>
+
+<form bindsubmit="onSubmit">
+
+<view class="info1">
+<input placeholder='请输入账号' name="account" bindinput="nameInput"/>
+</view>
+
+<view class="info2">
+<input password='true' placeholder='请输入密码' name="pwd" bindinput="passwordInput"/>
+</view>
+
+<view class='button'>
+
+<button class='btn1'  hover-class='btn1_hover' bindtap="login" loading="{{loading}}">
+<image class='btnImg' src='../images/humanPicture.png'></image>
+<view>     登录</view>
+</button>
+
+<button class='btn2'   hover-class='btn2_hover' bindtap="scanninglogin" >
+<image class='btnImg' src='../images/scanning.png' ></image>
+<view> 扫脸登录</view>
+</button>
+
+<button class='btn3' hover-class='btn3-hover' bindtap="register">
+<image class='btnImg' src='../images/register.png' ></image>
+<view> 注册</view>
+</button>
+
+</view>
+
+</form>
+
+</view>
