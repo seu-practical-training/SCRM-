@@ -1,0 +1,11 @@
+<camera
+ device-position="front"
+ flash="off"
+ binderror="error"
+ style="width: 100%; height: 500px;"
+></camera>
+
+<button class='btn1'  hover-class='btn1_hover' bindtap="takePhoto" loading="{{loading}}">
+<image class='btnImg' src='../images/scanning.png'></image>
+<view> 识别</view>
+</button>
