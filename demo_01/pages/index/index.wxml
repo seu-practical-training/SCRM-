@@ -1,0 +1,62 @@
+<!--index.wxml-->
+<view class="container">
+
+  <swiper indicator-dots="false" autoplay="true" interval="3000" duration="1000">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- <camera device-position="back" flash="off" binderror="error" style="width: 80%; height: 200px;"></camera> -->
+
+  <view class="leftbtn">
+    <button type="primary" style="width:60%">完善信息</button>
+  </view>
+
+  <image mode="widthFix" src="{{src}}"></image>
+
+
+</view>
+
+<view class="window_view">
+  <scroll-view class="scroll-view_H" scroll-x="true">
+    <view id="local" class="scroll-view-item_H local">
+      <view class='box'>
+        <image src='../../img/location_bar.png'></image>
+        <text>定位</text>
+      </view>
+    </view>
+    <view id="img" class="scroll-view-item_H img">
+      <view class='box'>
+        <image src='../../img/img_bar.png'></image>
+        <text>照片</text>
+      </view>
+    </view>
+    <view id="audio" class="scroll-view-item_H audio">
+      <view class='box'>
+        <image src='../../img/audio_bar.png'></image>
+        <text>语音</text>
+      </view>
+    </view>
+    <view id="qrcode" class="scroll-view-item_H qrcode">
+      <view class='box'>
+        <image src='../../img/qrcode_bar.png'></image>
+        <text>二维码</text>
+      </view>
+    </view>
+    <view id="txt" class="scroll-view-item_H txt">
+      <view class='box'>
+        <image src='../../img/txt_bar.png'></image>
+        <text>文本</text>
+      </view>
+    </view>
+    <view id="video" class="scroll-view-item_H video">
+      <view class='box'>
+        <image src='../../img/video_bar.png'></image>
+        <text>小视频</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

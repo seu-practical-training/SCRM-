@@ -1,0 +1,43 @@
+.window_view  {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: row;  
+   align-items: flex-end;   
+}
+
+.scroll-view_H { 
+   width: 100%;
+   height: 200rpx;
+   white-space: nowrap;
+}
+
+.scroll-view-item_H {
+   width: 150rpx;
+   height: 200rpx;
+   display: inline-flex;
+   margin-left: 5rpx;
+   white-space: nowrap;
+}
+
+.box {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column; 
+   justify-content: center;
+}
+
+image {
+   margin-right: auto;
+   margin-left: auto;
+   width: 100rpx;
+   height: 100rpx;
+}
+
+text {
+   margin-right: auto;
+   margin-left: auto;
+   margin-top: 5rpx;
+   font-size:50%;
+}
